@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="用户名："
+        android:id="@+id/showConnect"
+        android:textSize="20sp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userName"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/showConnect"
+        android:layout_alignBaseline="@id/showConnect"
+        android:hint="请输入用户名" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="密码："
+        android:id="@+id/textView2"
+        android:layout_below="@+id/showConnect"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_alignBaseline="@id/textView2"
+        android:layout_below="@+id/userName"
+        android:layout_alignStart="@+id/userName"
+        android:hint="请输入密码" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:id="@+id/login"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_marginTop="48dp"
+        android:visibility="gone"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信登录"
+        android:id="@+id/wx_login"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView2"
+        android:id="@+id/loadLayout"
+      >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2"
+            android:layout_gravity="center_vertical" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_above="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="51dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据加载中。。。"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

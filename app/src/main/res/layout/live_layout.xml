@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/aa"
+        ></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/swipe_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/controll_ui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:id="@+id/head_up_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/bg"
+                    android:orientation="horizontal"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/live_audience_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/head_up_layout"
+                    android:background="@mipmap/default_avatar"
+                    android:orientation="horizontal"
+                    />
+            </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ListView
+                        android:id="@+id/im_msg_listview"
+                        android:layout_width="300dp"
+                        android:layout_height="220dp"
+                        android:layout_alignParentBottom="true"
+                        android:cacheColorHint="#00000000"
+                        android:divider="#3c421b1b"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:stackFromBottom="true"
+                        android:transcriptMode="normal"/>
+
+                    <com.lixm.chat.view.InputTextMsgLayout
+                        android:id="@+id/inputTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/im_msg_listview"
+                        />
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/live_point_root"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="55dp"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/live_point_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="观点"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/live_point_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_point_title"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/live_point_close"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/record_switch_camera_disable"
+                android:orientation="horizontal"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp">
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_host_leave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"/>
+
+    <ImageView
+        android:id="@+id/live_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+</FrameLayout>

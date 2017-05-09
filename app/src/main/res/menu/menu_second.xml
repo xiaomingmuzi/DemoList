@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".activity.SecondActivity">
+    <item android:id="@+id/one"
+        android:title="One"
+        android:checkable="true"
+        />
+    <item android:id="@+id/two"
+        android:title="Two"
+        />
+    <item android:id="@+id/three"
+        android:title="Three"
+        android:checkable="true"
+        />
+    <item android:id="@+id/four"
+        android:title="Four"
+        android:checkable="true"
+        />
+</menu>

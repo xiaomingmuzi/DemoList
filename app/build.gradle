@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.lixm.chat"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            // Prevent gradle from building native code with ndk; we have our own Makefile for it.
+            jniLibs.srcDir 'libs' // Where generated .so files are placed.
+
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            /* resources.srcDirs = ['src/main/res']
+             aidl.srcDirs = ['src']
+             renderscript.srcDirs = ['src']*/
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: '*/so', dir: 'libs/armeabi-v7a')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/libammsdk.jar')
+    compile files('libs/multidex.1.0.1.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile project(':XUtilsLibrary')
+    compile project(':IMKit')
+    compile files('libs/zxing.jar')
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile files('libs/libksyplayer.jar')
+    compile files('libs/libksystat.jar')
+    compile files('libs/ksylive3.0.jar')
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/ks3-android-sdk-v.1.0.4.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.android.support:support-v4:25.0.0'
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainFragmentActivity">
+    <!-- TahHost 显示的View -->
+
+    <LinearLayout
+        android:id="@+id/realTabContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"></LinearLayout>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fragment_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f6f6f6"
+                android:orientation="vertical"
+                android:padding="10dp"></LinearLayout>
+        </FrameLayout>
+    </android.support.v4.app.FragmentTabHost>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line" />
+
+    <RadioGroup
+        android:id="@+id/bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp">
+
+        <RadioButton
+            android:id="@+id/bottom_msg"
+            style="@style/Bottom"
+            android:checked="true"
+            android:text="@string/bottom_msg" />
+
+        <RadioButton
+            android:id="@+id/bottom_friend"
+            style="@style/Bottom"
+            android:text="@string/bottom_friend" />
+
+        <RadioButton
+            android:id="@+id/bottom_user"
+            style="@style/Bottom"
+            android:text="@string/bottom_user" />
+    </RadioGroup>
+</LinearLayout>

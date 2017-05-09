@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="true"
+    >
+    <!--<item android:drawable="@mipmap/fireworks_1" android:duration="100" />-->
+    <item android:drawable="@mipmap/rotten_egg_1" android:duration="200" />
+    <item android:drawable="@mipmap/rotten_egg_2" android:duration="200" />
+    <item android:drawable="@mipmap/rotten_egg_3" android:duration="200" />
+    <!--<item android:drawable="@mipmap/rotten_egg_4" android:duration="300" />-->
+    <item android:drawable="@mipmap/rotten_egg_5" android:duration="200" />
+    <item android:drawable="@mipmap/rotten_egg_6" android:duration="200" />
+    <item android:drawable="@mipmap/rotten_egg_7" android:duration="200" />
+    <item android:drawable="@mipmap/rotten_egg_8" android:duration="300" />
+    <!--<item android:drawable="@mipmap/rotten_egg_9" android:duration="150" />-->
+    <!--<item android:drawable="@mipmap/rotten_egg_10" android:duration="150" />-->
+    <item android:drawable="@mipmap/rotten_egg_11" android:duration="300" />
+    <item android:drawable="@mipmap/rotten_egg_12" android:duration="300" />
+    <!--<item android:drawable="@mipmap/rotten_egg_13" android:duration="150" />-->
+</animation-list>
